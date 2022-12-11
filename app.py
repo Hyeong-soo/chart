@@ -4,13 +4,12 @@ import numpy as np
 import prices as pr
 from time import sleep
 
-
 def view_price(a):
-	if  a/1000000 > 0:
-		return str(int(a) / 1000000) + str(,)+ str((a%1000000)/1000) + str(,) + str(a%1000)
-	elif a/1000>0:
-		return str(a/1000) + str(,) + str(a%1000)
-	else return str(a)
+  if  int(a/1000000) >= 1:
+    return str(int(int(a) / 1000000)) + "," + str(int((a%1000000)/1000)) + "," + str(a%1000)
+  elif int(a/1000) >= 1:
+    return str(int(a/1000)) + "," + str(a%1000)
+  else: return str(a)
 
 
 st.set_page_config(
