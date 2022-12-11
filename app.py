@@ -24,11 +24,11 @@ if st.button('Update price', key='update_button'):
     pr.prices = np.r_[pr.prices, temp]
 if st.button("Reset"):
     pr.prices = np.zeros(shape=(1,5),dtype=np.intc)
-    pr.prices[0][0] = 1000000
+    pr.prices[0][0] = 800000
     pr.prices[0][1] = 1000000
     pr.prices[0][2] = 1000000
-    pr.prices[0][3] = 1000000
-    pr.prices[0][4] = 1000000
+    pr.prices[0][3] = 800000
+    pr.prices[0][4] = 500000
     pr.turn = 0
 cols = st.columns((1,1,2))
 cols[0].metric("SAM SMITH", pr.prices[pr.turn][0], pr.ss)
