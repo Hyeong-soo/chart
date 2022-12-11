@@ -36,8 +36,8 @@ cols = st.columns((1,1,2))
 cols[0].metric("SAM SMITH", format(pr.prices[pr.turn][0], ','), pr.ss)
 cols[0].metric("GG CHEMICAL", format(pr.prices[pr.turn][1], ','), pr.gc)
 cols[0].metric("MUSCAR", format(pr.prices[pr.turn][2], ','), pr.mc)
-cols[1].metric("KOKOa", view_price(int(pr.prices[pr.turn][3])), pr.kk)
-cols[1].metric("DTD", view_price(int(pr.prices[pr.turn][4])), pr.dt)
+cols[1].metric("KOKOa", format(pr.prices[pr.turn][0], ','), pr.kk)
+cols[1].metric("DTD", format(pr.prices[pr.turn][0], ','), pr.dt)
 chart_data = pd.DataFrame(
     pr.prices,
     columns=['SAM SMITH','GG CHEMICAL','MUSCAR', 'KOKOa', 'DTD']
