@@ -4,12 +4,6 @@ import numpy as np
 import prices as pr
 from time import sleep
 
-def view_price(a):
-  if  int(a/1000000) >= 1:
-    return str(int(int(a) / 1000000)) + "," + str(int((a%1000000)/1000)) + "," + str(a%1000)
-  elif int(a/1000) >= 1:
-    return str(int(a/1000)) + "," + str(a%1000)
-  else: return str(a)
 
 
 st.set_page_config(
@@ -39,9 +33,9 @@ if st.button("Reset"):
     pr.prices[0][4] = 500000
     pr.turn = 0
 cols = st.columns((1,1,2))
-cols[0].metric("SAM SMITH", view_price(int(pr.prices[pr.turn][0])), pr.ss)
-cols[0].metric("GG CHEMICAL", view_price(int(pr.prices[pr.turn][1])), pr.gc)
-cols[0].metric("MUSCAR", view_price(int(pr.prices[pr.turn][2])), pr.mc)
+cols[0].metric("SAM SMITH", format(pr.prices[pr.turn][0], ','), pr.ss)
+cols[0].metric("GG CHEMICAL", format(pr.prices[pr.turn][1], ','), pr.gc)
+cols[0].metric("MUSCAR", format(pr.prices[pr.turn][2], ','), pr.mc)
 cols[1].metric("KOKOa", view_price(int(pr.prices[pr.turn][3])), pr.kk)
 cols[1].metric("DTD", view_price(int(pr.prices[pr.turn][4])), pr.dt)
 chart_data = pd.DataFrame(
