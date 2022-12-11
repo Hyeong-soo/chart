@@ -31,7 +31,7 @@ if st.button("Reset"):
     pr.prices[0][4] = 500000
     pr.turn = 0
 cols = st.columns((1,1,2))
-cols[0].metric("SAM SMITH", pr.prices[pr.turn][0], pr.ss)
+cols[0].metric("SAM SMITH", "1234,1234", pr.ss)
 cols[0].metric("GG CHEMICAL", pr.prices[pr.turn][1], pr.gc)
 cols[0].metric("MUSCAR", pr.prices[pr.turn][2], pr.mc)
 cols[1].metric("KOKOa", pr.prices[pr.turn][3], pr.kk)
