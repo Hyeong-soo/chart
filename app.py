@@ -39,11 +39,11 @@ if st.button("Reset"):
     pr.prices[0][4] = 500000
     pr.turn = 0
 cols = st.columns((1,1,2))
-cols[0].metric("SAM SMITH", view_price(pr.prices[pr.turn][0]), pr.ss)
-cols[0].metric("GG CHEMICAL", view_price(pr.prices[pr.turn][1]), pr.gc)
-cols[0].metric("MUSCAR", view_price(pr.prices[pr.turn][2]), pr.mc)
-cols[1].metric("KOKOa", view_price(pr.prices[pr.turn][3]), pr.kk)
-cols[1].metric("DTD", view_price(pr.prices[pr.turn][4]), pr.dt)
+cols[0].metric("SAM SMITH", view_price(int(pr.prices[pr.turn][0])), pr.ss)
+cols[0].metric("GG CHEMICAL", view_price(int(pr.prices[pr.turn][1])), pr.gc)
+cols[0].metric("MUSCAR", view_price(int(pr.prices[pr.turn][2])), pr.mc)
+cols[1].metric("KOKOa", view_price(int(pr.prices[pr.turn][3])), pr.kk)
+cols[1].metric("DTD", view_price(int(pr.prices[pr.turn][4])), pr.dt)
 chart_data = pd.DataFrame(
     pr.prices,
     columns=['SAM SMITH','GG CHEMICAL','MUSCAR', 'KOKOa', 'DTD']
