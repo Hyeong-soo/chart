@@ -9,11 +9,11 @@ from time import sleep
 st.set_page_config(
     
     page_icon="📈",
-    page_title="Dream of Ape",
+    page_title="The Dream of Apes",
     layout="wide",
 )
 
-st.header("Welcome to Dream of Ape")
+st.header("Welcome to The Dream of Apes")
 
 if st.button('Update price', key='update_button'):
     pr.turn = pr.turn + 1
